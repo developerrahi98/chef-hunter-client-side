@@ -2,9 +2,11 @@ import React, { useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
 import Chefs from "../../Chefs/Chefs";
 import Slider from "../../slider/Slider";
+import { ColorRing } from "react-loader-spinner";
 
 const Home = () => {
   const [chefs, setChefs] = useState([]);
+
 
   useEffect(() => {
     fetch("http://localhost:5000/chefs")
@@ -69,7 +71,11 @@ const Home = () => {
           </ul>
         </div>
         <div className="ms-4 mt-5">
-            <img className="rounded" src="/src/assets/images/istockphoto-1408797987-170667a.jpg" alt="" />
+          <img
+            className="rounded"
+            src="/src/assets/images/istockphoto-1408797987-170667a.jpg"
+            alt=""
+          />
         </div>
       </div>
       <Slider></Slider>
